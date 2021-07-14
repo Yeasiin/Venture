@@ -48,10 +48,18 @@ export const FilterProvider = ({ children }) => {
   };
 
   const updateFilters = (e) => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
+    if (name === "price") {
+      value = parseInt(value);
+    }
+    if (name === "shipping") {
+      value = e.target.checked;
+    }
     dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
   };
-  const clearFilters = () => {};
+  const clearFilters = () => {
+    dispatch({ type: CLEAR_FILTERS });
+  };
 
   useEffect(() => {
     dispatch({ type: LOAD_PRODUCTS, payload: products });
