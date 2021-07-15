@@ -15,25 +15,32 @@ import {
   Error,
   Checkout,
   Cart,
+  AuthWrapper,
 } from "./pages";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Sidebar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/cart" component={Cart} />
-        <Route exact path="/checkout" component={Checkout} />
-        <Route exact path="/products" component={Products} />
-        <Route exact path="/products/:id" component={SingleProduct} />
-        <Route exact path="/error" component={Error} />
-        <Redirect to="/error" />
-      </Switch>
-      <Footer />
-    </Router>
+    <AuthWrapper>
+      <Router>
+        <Navbar />
+        <Sidebar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/cart" component={Cart} />
+          {/* Proctored Route */}
+          <PrivateRoute exact path="/checkout">
+            <Checkout />
+          </PrivateRoute>
+          {/* End Of Proctored Route */}
+          <Route exact path="/products" component={Products} />
+          <Route exact path="/products/:id" component={SingleProduct} />
+          <Route exact path="/error" component={Error} />
+          <Redirect to="/error" />
+        </Switch>
+        <Footer />
+      </Router>
+    </AuthWrapper>
   );
 }
 
