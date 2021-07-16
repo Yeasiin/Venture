@@ -9,7 +9,6 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
 
   const increase = () => {
     toggleAmount(id, "inc");
-    console.log("hey inc");
   };
   const decrease = () => {
     toggleAmount(id, "dec");
