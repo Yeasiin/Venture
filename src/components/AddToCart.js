@@ -30,7 +30,6 @@ const AddToCart = ({ product }) => {
       return tempAmount;
     });
   };
-  console.log(stock);
 
   return (
     <Wrapper>
@@ -57,7 +56,11 @@ const AddToCart = ({ product }) => {
           increaseAmount={increaseAmount}
           decreaseAmount={decreaseAmount}
         />
-        <Link to="/cart" className="btn" onClick={()=>addToCart(id,mainColor,amount,product)} >
+        <Link
+          to="/cart"
+          className="btn"
+          onClick={() => addToCart(id, mainColor, amount, product)}
+        >
           add to cart
         </Link>
       </div>
