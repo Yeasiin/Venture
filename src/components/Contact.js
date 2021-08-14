@@ -38,6 +38,9 @@ const Wrapper = styled.section`
     color: var(--clr-grey-5);
   }
   .contact-form {
+    @media (max-width: 400px) {
+      display: inherit;
+    }
     width: 90vw;
     max-width: 500px;
     display: grid;
@@ -46,11 +49,19 @@ const Wrapper = styled.section`
 
   .form-input,
   .submit-btn {
+    @media (max-width: 400px) {
+      margin: 8px 0;
+      width: 100%;
+    }
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border: 2px solid var(--clr-black);
   }
   .form-input {
+    @media (max-width: 400px) {
+      border-right: 2px solid;
+      border-radius: var(--radius);
+    }
     border-right: none;
     color: var(--clr-grey-3);
     border-top-left-radius: var(--radius);

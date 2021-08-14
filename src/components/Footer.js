@@ -3,11 +3,18 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <Wrapper>
-      <h5>
+      {/* <h5>
         &copy; {new Date().getFullYear()}
          <span> ComfySloth</span> 
       </h5>
       <h5>All Rights Reserved</h5>
+      <br/> */}
+      <h5>
+        Made with ❤ by{" "}
+        <a target="_blank" rel="noreferrer" href="https://github.com/yeasiin">
+          Yeasin Arfat
+        </a>
+      </h5>
     </Wrapper>
   );
 };
@@ -30,6 +37,9 @@ const Wrapper = styled.footer`
     font-weight: 400;
     text-transform: none;
     line-height: 1.25;
+    & > a {
+      color: #d7def5;
+    }
   }
   @media (min-width: 776px) {
     flex-direction: row;
