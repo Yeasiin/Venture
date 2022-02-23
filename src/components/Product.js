@@ -13,10 +13,10 @@ const Product = ({ image, id, price, name }) => {
           <FaSearch />
         </Link>
       </div>
-      <footer>
+      <section>
         <h5>{name}</h5>
         <p>{formatPrice(price)}</p>
-      </footer>
+      </section>
     </Wrapper>
   );
 };
@@ -39,7 +39,7 @@ const Wrapper = styled.article`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--clr-primary-5);
+    background: var(--clr-venture-1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,26 +55,29 @@ const Wrapper = styled.article`
     }
   }
   .container:hover img {
-    opacity: 0.5;
+    opacity: 0.7;
   }
   .container:hover .link {
     opacity: 1;
   }
-  footer {
+  section {
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  footer h5,
-  footer p {
+  section h5 {
+    font-size: 1.1rem;
+  }
+  section h5,
+  section p {
+    color: var(--clr-venture-1);
+    font-weight: 500;
     margin-bottom: 0;
-    font-weight: 400;
   }
 
-  footer p {
-    color: var(--clr-primary-5);
-    letter-spacing: var(--spacing);
+  section p {
+    font-size: 1rem;
   }
 `;
 export default Product;

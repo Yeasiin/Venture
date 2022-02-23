@@ -22,10 +22,7 @@ const FeaturedProducts = () => {
 
   return (
     <Wrapper className="section">
-      <div className="title">
-        <h2>featured Products</h2>
-        <div className="underline"></div>
-      </div>
+      <h2 className="title">Most Popular Items</h2>
       <div className="section-center featured">
         {featured.slice(0, 3).map((product) => (
           <Product key={product.id} {...product} />
@@ -39,7 +36,20 @@ const FeaturedProducts = () => {
 };
 
 const Wrapper = styled.section`
-  background: var(--clr-grey-10);
+  & > {
+    .title {
+      color: var(--clr-venture-1);
+      font-size: 1.5rem;
+
+      @media (min-width: 600px) {
+        font-size: 1.7rem;
+      }
+      @media (min-width: 900px) {
+        font-size: 2rem;
+      }
+    }
+  }
+
   .featured {
     margin: 4rem auto;
     display: grid;
@@ -50,7 +60,9 @@ const Wrapper = styled.section`
   }
   .btn {
     display: block;
-    width: 148px;
+    padding: 0.5rem 1rem;
+    width: 160px;
+    font-size: 0.9rem;
     margin: 0 auto;
     text-align: center;
   }

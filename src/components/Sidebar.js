@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 import { useProductsContext } from "../context/products_context";
 import { FaTimes } from "react-icons/fa";
@@ -7,6 +6,7 @@ import { links } from "../utils/constants";
 import styled from "styled-components";
 import CartButtons from "./CartButtons";
 import { useUserContext } from "../context/user_context";
+import logo from "../assets/venture-dark.svg";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
@@ -16,7 +16,7 @@ const Sidebar = () => {
     <SidebarContainer>
       <aside className={`sidebar ${isSidebarOpen ? "show-sidebar" : ""}`}>
         <div className="sidebar-header">
-          <img src={logo} className="logo" alt="ComfySloth" />
+          <img src={logo} className="logo" alt="Venture" />
           <button className="close-btn" onClick={closeSidebar}>
             <FaTimes />
           </button>
@@ -53,14 +53,13 @@ const SidebarContainer = styled.div`
     font-size: 2rem;
     background: transparent;
     border-color: transparent;
-    color: var(--clr-primary-5);
     transition: var(--transition);
     cursor: pointer;
-    color: var(--clr-red-dark);
+    color: var(--clr-venture-1);
     margin-top: 0.2rem;
   }
   .close-btn:hover {
-    color: var(--clr-red-light);
+    color: var(--clr-venture-2);
   }
   .logo {
     justify-self: center;
@@ -75,9 +74,9 @@ const SidebarContainer = styled.div`
     font-size: 1rem;
     text-transform: capitalize;
     padding: 1rem 1.5rem;
-    color: var(--clr-grey-3);
+    color: var(--clr-venture-1);
     transition: var(--transition);
-    letter-spacing: var(--spacing);
+    font-weight: 500;
   }
 
   .links a:hover {
@@ -103,11 +102,14 @@ const SidebarContainer = styled.div`
     z-index: 999;
   }
   .cart-btn-wrapper {
-    margin: 2rem auto;
+    margin: 0 2rem auto;
   }
   @media screen and (min-width: 992px) {
     .sidebar {
       display: none;
+    }
+    .cart-btn-wrapper {
+      margin: 2rem 0;
     }
   }
 `;

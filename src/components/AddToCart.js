@@ -5,6 +5,8 @@ import { FaCheck } from "react-icons/fa";
 import { useCartContext } from "../context/cart_context";
 import AmountButtons from "./AmountButtons";
 
+import cartIcon from "./../assets/shopping-cart-light.svg";
+
 const AddToCart = ({ product }) => {
   const { addToCart } = useCartContext();
   const { id, colors, stock } = product;
@@ -61,6 +63,7 @@ const AddToCart = ({ product }) => {
           className="btn"
           onClick={() => addToCart(id, mainColor, amount, product)}
         >
+          <img src={cartIcon} className="btn-cart-icon" alt="" />
           add to cart
         </Link>
       </div>
@@ -106,11 +109,15 @@ const Wrapper = styled.section`
   }
   .btn-container {
     margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
   }
 
   .btn {
-    margin-top: 1rem;
-    width: 140px;
+    padding: 0.5rem 2.5rem;
+    font-size: 1rem;
+    display: flex;
+    gap: 0.5rem;
   }
 `;
 export default AddToCart;

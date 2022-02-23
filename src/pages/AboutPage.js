@@ -1,30 +1,31 @@
 import React from "react";
 import styled from "styled-components";
-import { PageHero } from "../components";
-import aboutImg from "../assets/hero-bcg.jpeg";
+import aboutImg from "../assets/about.jpg";
 
 const AboutPage = () => {
   return (
     <main>
-      <PageHero title="About" />
       <Wrapper className="page section section-center">
-        <img src={aboutImg} alt="nice Desk" />
+        <img src={aboutImg} alt="nice Sofa" />
         <article>
-          <div className="title">
-            <h2>Our Story</h2>
-            <div className="underline"></div>
-          </div>
+          <p className="sub-title">About Us</p>
+          <h2 className="title">We Are The Leader In The Architectural</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            accusantium sapiente tempora sed dolore esse deserunt eaque
-            excepturi, delectus error accusamus vel eligendi, omnis beatae.
-            Quisquam, dicta. Eos quod quisquam esse recusandae vitae neque
-            dolore, obcaecati incidunt sequi blanditiis est exercitationem
-            molestiae delectus saepe odio eligendi modi porro eaque in libero
-            minus unde sapiente consectetur architecto. Ullam rerum, nemo iste
-            ex, eaque perspiciatis nisi, eum totam velit saepe sed quos
-            similique amet. Ex, voluptate accusamus nesciunt totam vitae esse
-            iste.
+            Venture Make Furniture focused on quality, minimalism, and
+            functionality. Our mission is to provide a unique set of Furniture
+            that fascinate and inspire the user. We review each product, down to
+            its packaging, to ensure that we continuously provide the best in
+            both quality and design.
+          </p>
+          <p>
+            Our Products are Exported all over the world. Whether from Denmark,
+            Japan Or United States. In addition, we are the exclusive North
+            American distributor for a number of brands found within our store.
+          </p>
+          <p>
+            We're happy to help. If you have any questions regarding a product
+            or an order, please feel free to reach out to us at
+            info@venture.com.
           </p>
         </article>
       </Wrapper>
@@ -46,14 +47,20 @@ const Wrapper = styled.section`
     line-height: 2;
     max-width: 45em;
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: var(--clr-grey-5);
   }
   .title {
+    font-size: 2.3rem;
     text-align: left;
+    line-height: 1.2;
+    color: var(--clr-venture-1);
+    max-width: 20ch;
   }
-  .underline {
-    margin-left: 0;
+  .sub-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
   }
   @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr;

@@ -1,30 +1,39 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import heroBcg from "../assets/hero-bcg.jpeg";
-import heroBcg2 from "../assets/hero-bcg-2.jpeg";
+import heroBcg from "../assets/venture-hero-bcg.jpg";
 
 const Hero = () => {
   return (
-    <Wrapper className="section-center">
+    <Wrapper className=" section-center">
       <article className="content">
-        <h1>
-          Design Your
-          <br /> comfort zone
+        <h1 className="heading">
+          Each Project we develop is unique and personal
         </h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at
-          sed omnis corporis doloremque possimus velit! Repudiandae nisi odit,
-          aperiam odio ducimus, obcaecati libero et quia tempora excepturi quis
-          alias?
+        <p className="paragraph">
+          We Design Pieces Of Furniture And Object That Perfectly Gap Between
+          Functionality And Beauty.
         </p>
+        <div className="flex">
+          <div>
+            <h4>500+</h4>
+            <p>Total Products</p>
+          </div>
+          <div>
+            <h4>50</h4>
+            <p>Crafter</p>
+          </div>
+          <div>
+            <h4>9.0/10</h4>
+            <p>User Satisfaction</p>
+          </div>
+        </div>
         <Link to="/products" className="btn hero-btn">
           shop now
         </Link>
       </article>
       <article className="img-container">
-        <img src={heroBcg} className="main-img" alt="nice Table" />
-        <img src={heroBcg2} className="accent-img" alt="Person Working" />
+        <img src={heroBcg} className="main-img" alt="Furniture" />
       </article>
     </Wrapper>
   );
@@ -38,56 +47,61 @@ const Wrapper = styled.section`
     display: none;
   }
 
-  p {
-    line-height: 2;
+  .paragraph {
+    font-weight: 400;
+    line-height: 1.6;
     max-width: 45em;
-    margin-bottom: 2rem;
-    color: var(--clr-grey-5);
-    font-size: 1rem;
+    color: var(--clr-venture-1);
+    margin-bottom: 1.5rem;
+  }
+
+  .content {
+    font-weight: 600;
+    padding: 4rem 0;
+    color: var(--clr-venture-1);
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      max-width: 28em;
+      margin-bottom: 1.5rem;
+      h4 {
+        font-weight: 500;
+        margin-bottom: 0.3rem;
+        font-size: 1.4rem;
+      }
+      & > div > p {
+        margin: 0;
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+    }
   }
   @media (min-width: 992px) {
     height: calc(100vh - 5rem);
     grid-template-columns: 1fr 1fr;
     gap: 8rem;
-    h1 {
-      margin-bottom: 2rem;
-    }
-    p {
-      font-size: 1.25rem;
+
+    .heading {
+      margin-bottom: 1rem;
     }
     .hero-btn {
-      padding: 0.75rem 1.5rem;
+      padding: 0.6rem 1.8rem;
       font-size: 1rem;
     }
     .img-container {
       display: block;
       position: relative;
+      justify-self: end;
     }
     .main-img {
       width: 100%;
-      height: 550px;
+      height: 530px;
       position: relative;
       border-radius: var(--radius);
       display: block;
       object-fit: cover;
-    }
-    .accent-img {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 250px;
-      transform: translateX(-50%);
-      border-radius: var(--radius);
-    }
-    .img-container::before {
-      content: "";
-      position: absolute;
-      width: 10%;
-      height: 80%;
-      background: var(--clr-primary-9);
-      bottom: 0%;
-      left: -8%;
-      border-radius: var(--radius);
+      margin-top: 1rem;
     }
   }
 `;

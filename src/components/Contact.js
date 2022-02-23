@@ -5,12 +5,11 @@ const Contact = () => {
   return (
     <Wrapper>
       <div className="section-center">
-        <h3>Join our newsletter and get 20% off</h3>
         <div className="content">
+          <h3>Join over 10,000 forward thinkers.</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            sint unde quaerat ratione soluta veniam provident adipisci cumque
-            eveniet tempore?
+            Our customers save time and money with Venture. Leave the heavy
+            lifting to us, and take furniture off your to-do list.
           </p>
           <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
             <input
@@ -28,21 +27,35 @@ const Contact = () => {
   );
 };
 const Wrapper = styled.section`
-  padding: 5rem 0;
+  background-color: #f4f5f5;
+  padding: 7rem 0rem;
+  text-align: center;
+  @media (max-width: 650px) {
+      padding: 5rem 0rem;
+    }
+
+  & .content {
+    max-width: 50rem;
+    margin: 0 auto;
+
   h3 {
     text-transform: none;
+    color: var(--clr-venture-1);
   }
   p {
-    line-height: 2;
-    max-width: 45em;
-    color: var(--clr-grey-5);
+    line-height: 1.7;
+    max-width: 40em;
+    margin: 0.5rem auto 0;
+
+    color: var(--clr-venture-1);
   }
   .contact-form {
     @media (max-width: 400px) {
       display: inherit;
     }
-    width: 90vw;
+    width: 85vw;
     max-width: 500px;
+    margin: 2rem auto 0;
     display: grid;
     grid-template-columns: 1fr auto;
   }
@@ -52,10 +65,11 @@ const Wrapper = styled.section`
     @media (max-width: 400px) {
       margin: 8px 0;
       width: 100%;
+      border-radius: 4px !important;
     }
     font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--clr-black);
+    padding: 0.7rem 1rem;
+    border: 2px solid var(--clr-venture-1);
   }
   .form-input {
     @media (max-width: 400px) {
@@ -76,30 +90,25 @@ const Wrapper = styled.section`
     text-transform: capitalize;
   }
   .submit-btn {
-    background: var(--clr-primary-5);
+    background: var(--clr-venture-1);
     text-transform: capitalize;
     letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
-    color: var(--clr-black);
+    color: #fff;
   }
   .submit-btn:hover {
     color: var(--clr-white);
   }
   @media (min-width: 992px) {
-    .content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 8rem;
-      margin-top: 2rem;
-    }
     p {
       margin-bottom: 0;
     }
   }
-  @media (min-width: 1280px) {
-    padding: 15rem 0;
+  @media (max-width: 550px) {
+    .content {
+      text-align: center;
+    }
   }
 `;
 

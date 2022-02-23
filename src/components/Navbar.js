@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.svg";
+import logo from "../assets/venture-dark.svg";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { links } from "../utils/constants";
@@ -16,7 +16,7 @@ const Nav = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <img src={logo} alt="Comfy Sloth" />
+            <img src={logo} className="logo-dark" alt="Venture" />
           </Link>
           <button className="nav-toggle" onClick={openSidebar}>
             <FaBars />
@@ -46,7 +46,8 @@ const NavContainer = styled.nav`
   height: 5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
 
   .nav-center {
     width: 90vw;
@@ -57,15 +58,24 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    img {
-      width: 175px;
-      margin-left: -15px;
+
+    & > a {
+      text-align: right;
+    }
+
+    .logo-dark {
+      max-width: 100%;
+      width: 140px;
+
+      @media (max-width: 776px) {
+        width: 120px;
+      }
     }
   }
   .nav-toggle {
     background: transparent;
     border: transparent;
-    color: var(--clr-primary-5);
+    color: var(--clr-venture-1);
     cursor: pointer;
     svg {
       font-size: 2rem;
@@ -93,13 +103,14 @@ const NavContainer = styled.nav`
         margin: 0 0.5rem;
       }
       a {
-        color: var(--clr-grey-3);
+        font-weight: 500;
+        color: var(--clr-venture-1);
         font-size: 1rem;
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         padding: 0.5rem;
         &:hover {
-          border-bottom: 2px solid var(--clr-primary-7);
+          border-bottom: 2px solid var(--clr-venture-1);
         }
       }
     }

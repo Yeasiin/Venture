@@ -24,13 +24,14 @@ const Wrapper = styled.div`
   align-items: center;
   h2 {
     margin-bottom: 0;
+    font-size: 1.4rem;
   }
   button {
     background: transparent;
     border-color: transparent;
     cursor: pointer;
-    padding: 1rem 0;
-    width: 2rem;
+    padding: 0.8rem 0;
+    width: 1.6rem;
     height: 1rem;
     display: flex;
     align-items: center;
