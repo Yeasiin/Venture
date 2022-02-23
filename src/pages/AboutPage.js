@@ -48,7 +48,7 @@ const Wrapper = styled.section`
     max-width: 45em;
     margin: 0 auto;
     margin-top: 1rem;
-    color: var(--clr-grey-5);
+    color: var(--clr-grey-4);
   }
   .title {
     font-size: 2.3rem;

@@ -22,7 +22,6 @@ const CartPage = () => {
 
   return (
     <main>
-      <PageHero title="Checkout" />
       <Wrapper className="page">
         <CartContent />
       </Wrapper>

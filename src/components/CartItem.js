@@ -75,7 +75,7 @@ const Wrapper = styled.article`
   }
 
   .color {
-    color: var(--clr-grey-5);
+    color: var(--clr-grey-4);
     font-size: 0.75rem;
     letter-spacing: var(--spacing);
     text-transform: capitalize;
@@ -93,7 +93,7 @@ const Wrapper = styled.article`
     }
   }
   .price-small {
-    color: var(--clr-primary-5);
+    color: var(--clr-venture-1);
   }
   .amount-btns {
     width: 75px;
@@ -125,7 +125,7 @@ const Wrapper = styled.article`
     .subtotal {
       display: block;
       margin-bottom: 0;
-      color: var(--clr-grey-5);
+      color: var(--clr-grey-4);
       font-weight: 400;
       font-size: 1rem;
     }
@@ -135,7 +135,7 @@ const Wrapper = styled.article`
     .price {
       display: block;
       font-size: 1rem;
-      color: var(--clr-primary-5);
+      color: var(--clr-venture-1);
       font-weight: 400;
     }
     .name {

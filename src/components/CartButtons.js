@@ -1,10 +1,11 @@
 import React from "react";
-// import { FaShoppingCart, FaUserMinus, FaUserPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useProductsContext } from "../context/products_context";
 import { useCartContext } from "../context/cart_context";
 import { useUserContext } from "../context/user_context";
+
+import userLogout from "./../assets/icon-logout.svg";
 
 import ShoppingCart from "./../assets/shopping-cart.svg";
 import UserCircle from "./../assets/user-circle.svg";
@@ -31,7 +32,7 @@ const CartButtons = () => {
           }}
         >
           {/* logout */}
-          <img src={UserCircle} alt="" />
+          <img src={userLogout} alt="" />
         </button>
       ) : (
         <button type="button" className="auth-btn" onClick={loginWithRedirect}>
