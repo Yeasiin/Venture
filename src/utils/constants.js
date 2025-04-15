@@ -15,7 +15,10 @@ export const links = [
     url: "/products",
   },
 ];
+export const products_url =
+  process.env.REACT_APP_PRODUCT_URL ??
+  "https://thingproxy.freeboard.io/fetch/https://course-api.com/react-store-products";
 
-export const products_url = "https://course-api.com/react-store-products";
-
-export const single_product_url = `https://course-api.com/react-store-single-product?id=`;
+export const single_product_url =
+  process.env.REACT_APP_SINGLE_PRODUCT_URL ??
+  `https://thingproxy.freeboard.io/fetch/https://course-api.com/react-store-single-product?id=`;
