@@ -16,9 +16,8 @@ export const links = [
   },
 ];
 export const products_url =
-  process.env.REACT_APP_PRODUCT_URL ??
-  "https://thingproxy.freeboard.io/fetch/https://course-api.com/react-store-products";
+  process.env.REACT_APP_PRODUCT_URL ?? "/.netlify/functions/products";
 
 export const single_product_url =
   process.env.REACT_APP_SINGLE_PRODUCT_URL ??
-  `https://thingproxy.freeboard.io/fetch/https://course-api.com/react-store-single-product?id=`;
+  `/.netlify/functions/single-product?id=`;
